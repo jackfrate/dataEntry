@@ -4,7 +4,7 @@ import decimal
 """
 Object representing an item, contains a Name, Category, Price, nad unit of measure
 
-clean_price is used because floats don't play nice and need to be exact. 
+clean_price is used because floats don't play nice and need to be exact for prices.
 """
 
 
@@ -14,10 +14,13 @@ class ItemPub:
         self.category = category
         self.price = str(round(price, 2))
         self.uom = uom
+        # int that will know when to reset the loop
+        self.loop_num = 4
 
     # prints the data in the class for a test
     def print_for_test(self):
-        print(self.name, '  ', self.category,  '  ', self.price, '  ', self.uom, '\n')
+        print(self.name, '  ', self.category,  '  ',
+              self.price, '  ', self.uom, '\n')
 
     # cleans the price so it can be entered properly
     def clean_price(self):

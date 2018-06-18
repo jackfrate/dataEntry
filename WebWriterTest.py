@@ -2,7 +2,7 @@ from selenium import webdriver
 
 
 """
-class that takes in a dictionary of item objects and will put them into forms 
+class that takes in a dictionary of item objects and will put them into forms
 https://www.hongkiat.com/blog/automate-create-login-bot-python-selenium/
 """
 
@@ -10,7 +10,7 @@ https://www.hongkiat.com/blog/automate-create-login-bot-python-selenium/
 class WebWriterTest:
     def __init__(self, inventory: {}):
         self.inventory = inventory
-        self.destination = 'file:///C:/Users/Jack/Desktop/webtest/page.html'
+        self.destination = r'C:\Users\jackf\Documents\pythonProjects\dataEntry\sampleWeb\webtest\page.html'
 
     def write(self):
         # opens chrome and goes to the adress
@@ -19,6 +19,7 @@ class WebWriterTest:
 
         # go to each box and type the code in
         ct = 0
+
         for key, value in self.inventory.items():
             for i in range(0, 4):
 
